@@ -7,13 +7,16 @@ public class GuessingGame
     public static void mai(String [] args)
     {
         Intro();
-        Game();
-        PlayAgain();
-        Results();
+        //Game();
+        //PlayAgain();
+        //Results();
     }
 
     // intro for the game and how the game is played
     public static void Intro() {
+        System.out.printf("%nThis program allows you to play a guessing game.");
+        System.out.printf("%n");
+        System.out.printf("");
 
     }
 

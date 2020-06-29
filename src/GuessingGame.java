@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class GuessingGame
@@ -7,16 +8,25 @@ public class GuessingGame
     public static void main(String [] args)
     {
         Intro();
+        random();
         //Game();
         //PlayAgain();
         //Results();
     }
 
     // intro for the game and how the game is played
-    public static void Intro() {
-        System.out.printf("%nThis program allows you to play a guessing game.");
-        System.out.printf("%n");
-        System.out.printf("");
+    public static void Intro()
+    {
+        System.out.printf("This program allows you to play a guessing game.");
+        System.out.printf("%nI will think of a number between 1 and");
+        System.out.printf("%n100 and will allow you to guess until");
+        System.out.printf("%nyou get it. For each guess, I will tell you");
+        System.out.printf("%nwhether the right answer is higher or lower");
+        System.out.printf("%nthan your guess.");
+    }
+
+    private static final Random numGen = new Random();
+    public static void random() {
 
     }
 

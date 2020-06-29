@@ -4,7 +4,7 @@ public class GuessingGame
 {
     Scanner input = new Scanner(System.in);
 
-    public static void mai(String [] args)
+    public static void main(String [] args)
     {
         Intro();
         //Game();

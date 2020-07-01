@@ -21,7 +21,7 @@ public class GuessingGame
     // intro for the game and how the game is played
     public static void gameIntro()
     {
-        System.out.printf("This program allows you to play a guessing game.");
+        System.out.print("This program allows you to play a guessing game.");
         System.out.printf("%nI will think of a number between 1 and");
         System.out.printf("%n100 and will allow you to guess until");
         System.out.printf("%nyou get it. For each guess, I will tell you");
@@ -55,13 +55,12 @@ public class GuessingGame
             } else if (userGuess > numGen)
             {
                 System.out.println("Its lower");
-            } else if (userGuess < numGen)
-            {
+            } else {
                 System.out.println("Its higher");
             }
             numberOfGuesses++;
 
-        } while (Play == false);
+        } while (!Play);
 
         if (numberOfGuesses < bestMin)
         {
@@ -78,7 +77,7 @@ public class GuessingGame
         System.out.print("Would you like to play again y/n? ");
         answer = input.next();
 
-        switch (answer)
+        switch (answer.toLowerCase())
         {
             case "y": {
                 Game();

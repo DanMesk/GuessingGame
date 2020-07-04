@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class DMGuessingGame
+public class GuessingGame
 {
     private static double totalGames;
     private static double numberOfGuesses;

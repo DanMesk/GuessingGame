@@ -33,6 +33,7 @@ public class GuessingGame
         // counts how many games played
         totalGames++;
 
+        // generates the number from 0 - 100
         Random rand = new Random();
         int numGen = rand.nextInt(100);
 

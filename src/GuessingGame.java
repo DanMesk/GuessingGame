@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class GuessingGame
 {
-    private static double totalGames;
+    // initializing the variables I will be using
+    private static int totalGames;
     private static double numberOfGuesses;
     private static int bestNum = Integer.MAX_VALUE;
     // global user input to use for all methods
@@ -33,7 +34,7 @@ public class GuessingGame
         totalGames++;
 
         Random rand = new Random();
-        int numGen = rand.nextInt(5);
+        int numGen = rand.nextInt(100);
 
         // counts the number of tries
         int numTries = 0;
@@ -41,7 +42,7 @@ public class GuessingGame
         // The core part of the game
         int userGuess;
         do {
-            System.out.print("Guess a number between 1 and 5: ");
+            System.out.print("Guess a number between 1 and 100: ");
             userGuess = input.nextInt();
             numTries++;
             numberOfGuesses++;
@@ -55,6 +56,7 @@ public class GuessingGame
 
         } while (userGuess != numGen);
 
+        // getting the lowest number of tries
         if (numTries < bestNum)
         {
             bestNum = numTries;
@@ -90,9 +92,11 @@ public class GuessingGame
     // this method will display the results of the game played
     private static void Results()
     {
-        System.out.println("Total games played: " + totalGames);
+        System.out.printf("%n            *Results*%n");
+        System.out.printf("_________________________________");
+        System.out.printf("%nTotal games played: " + totalGames + "%n");
         System.out.println("Total guesses: " + numberOfGuesses);
         System.out.printf("Average guesses per game: %,.2f%n", numberOfGuesses/totalGames);
-        System.out.print("Best game: " + bestNum);
+        System.out.printf("Best game: " + bestNum + " tries" + "%n");
     }
-}
+} // end of class
